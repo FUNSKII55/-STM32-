@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"yaokongtest\startup_stm32f103xe.o"
+"yaokongtest\e49_1.o"
+"yaokongtest\interruptprocess.o"
+"yaokongtest\main.o"
+"yaokongtest\stm32f1xx_it.o"
+"yaokongtest\stm32f1xx_hal_msp.o"
+"yaokongtest\stm32f1xx_hal_gpio_ex.o"
+"yaokongtest\stm32f1xx_hal_uart.o"
+"yaokongtest\stm32f1xx_hal.o"
+"yaokongtest\stm32f1xx_hal_rcc.o"
+"yaokongtest\stm32f1xx_hal_rcc_ex.o"
+"yaokongtest\stm32f1xx_hal_gpio.o"
+"yaokongtest\stm32f1xx_hal_dma.o"
+"yaokongtest\stm32f1xx_hal_cortex.o"
+"yaokongtest\stm32f1xx_hal_pwr.o"
+"yaokongtest\stm32f1xx_hal_flash.o"
+"yaokongtest\stm32f1xx_hal_flash_ex.o"
+"yaokongtest\stm32f1xx_hal_exti.o"
+"yaokongtest\system_stm32f1xx.o"
+--strict --scatter "yaokongtest\yaokongtest.sct"
+--libpath "D:\keil\ARM\ARMCC\lib" --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "yaokongtest.map" -o yaokongtest\yaokongtest.axf
