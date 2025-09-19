@@ -46,6 +46,7 @@ motor_devicedriver\freertos_main.o: E:\Applications\Coding & Environmental Appli
 motor_devicedriver\freertos_main.o: E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\Bin\..\include\limits.h
 motor_devicedriver\freertos_main.o: ../Peripheral/UI_PID.h
 motor_devicedriver\freertos_main.o: ../Peripheral/menu.h
+motor_devicedriver\freertos_main.o: ../Peripheral/filter.h
 motor_devicedriver\freertos_main.o: ../FreeRTOS/include/FreeRTOS.h
 motor_devicedriver\freertos_main.o: ../Core/Inc/FreeRTOSConfig.h
 motor_devicedriver\freertos_main.o: ../FreeRTOS/include/projdefs.h

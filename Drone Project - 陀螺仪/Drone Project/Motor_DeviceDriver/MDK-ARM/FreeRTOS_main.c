@@ -14,6 +14,7 @@
 #include "UI.h"
 #include "UI_PID.h"
 #include "menu.h"
+#include "filter.h"
 //FREERTOS RELATED INCLUDE 
 #include "FreeRTOS.h"
 #include "task.h"
@@ -78,41 +79,41 @@ void task4(void * pvParameters);
 
 	//ROLL  横滚
 	PID_t roll_pid = {
-			.Kp = 1.8f,
-			.Ki = 0.01f,
-			.Kd = 0.03f,
+			.Kp = 1.8f*60.0,
+			.Ki = 0.01*60.0f,
+			.Kd = 0.03*60.0f,
 			.setpoint = 0.0f,
 			.integral = 0.0f,
 			.last_error = 0.0f,
 			.output = 0.0f,
 			.integral_max = 500.0f,
-			.output_max = 2000.0f
+			.output_max = 4000.0f
 	};
 
 	//YAW
 	PID_t yaw_pid = {
-			.Kp = 1.8f,
-			.Ki = 0.01f,
-			.Kd = 0.03f,
+			.Kp = 1.8f*60.0,
+			.Ki = 0.01*60.0f,
+			.Kd = 0.03*60.0f,
 			.setpoint = 0.0f,
 			.integral = 0.0f,
 			.last_error = 0.0f,
 			.output = 0.0f,
 			.integral_max = 500.0f,
-			.output_max = 2000.0f
+			.output_max = 4000.0f
 	};
 
 	//PITCH  俯仰
 	PID_t pitch_pid = {
-			.Kp = 2.2f,
-			.Ki = 0.01f,
-			.Kd = 0.03f,
+			.Kp = 1.8*60.0f,
+			.Ki = 0.01*60.0f,
+			.Kd = 0.03*60.0f,
 			.setpoint = 0.0f,
 			.integral = 0.0f,
 			.last_error = 0.0f,
 			.output = 0.0f,
 			.integral_max = 500.0f,
-			.output_max = 2000.0f
+			.output_max = 4000.0f
 };
 	
 // PID计算
@@ -177,12 +178,12 @@ void Motor_Speed_Set(int pwm1, int pwm2, int pwm3, int pwm4, int pwm5, int pwm6)
 *
 *
 */
-//volatile float roll_output = 0.0f;
-//volatile float yaw_output  = 0.0f;
-//volatile float pitch_output= 0.0f;
+volatile float roll_output = 0.0f;
+volatile float yaw_output  = 0.0f;
+volatile float pitch_output= 0.0f;
 
 volatile float Real_roll = 0.0f, Real_pitch = 0.0f, Real_yaw = 0.0f;
-int base_pwm = 1000; 
+int base_pwm = 3000; 
 volatile unsigned int Departure_Flag = 0; 
 
 
@@ -251,6 +252,7 @@ void start_task(void * pvParameters)
 */
 void task1(void * pvParameters)
 {
+	
 	MPU6050_init(&hi2c2);
 	while(1)	
 	{
@@ -258,18 +260,18 @@ void task1(void * pvParameters)
 		MPU6050 mpu_data;  // 姿态变量
 		MPU6050_Get_Angle_Plus(&mpu_data);
 
-    Real_yaw   =  mpu_data.yaw*57.3;
-    Real_pitch = -mpu_data.roll*57.3;																				
-    Real_roll   =  mpu_data.pitch*57.3;
+    Real_yaw   =  mpu_data.yaw;
+    Real_pitch = -mpu_data.roll;																				
+    Real_roll   =  mpu_data.pitch;
 		
 		char uart_msg[100];
-    sprintf(uart_msg, "%.3f,%.3f,%.3f\n", 
+    sprintf(uart_msg, "%.3f,%.3f,%.3f,\n", 
     Real_yaw, Real_pitch,Real_roll);
 	  HAL_UART_Transmit(&huart1, (uint8_t*)uart_msg, strlen(uart_msg), 10);
 		
 		
-		
-		vTaskDelay(10);
+	
+		vTaskDelay(5);
 	}
 }
 
@@ -317,6 +319,11 @@ void task2(void * pvParameters)
         int pwm4 = base_pwm + roll_output + yaw_output - pitch_output;
         int pwm5 = base_pwm - roll_output + yaw_output - pitch_output;
         int pwm6 = base_pwm + roll_output - yaw_output - pitch_output;
+			
+//				char uart_msg[100];
+//				sprintf(uart_msg, "%d,%d,%d,%d,%d,%d\n", 
+//				pwm1,pwm2,pwm3,pwm4,pwm5,pwm6);
+//				HAL_UART_Transmit(&huart1, (uint8_t*)uart_msg, strlen(uart_msg), 10);
 
 //				int pwm1 = 200;
 //        int pwm2 = 200;
@@ -347,8 +354,8 @@ void task3(void * pvParameters)
 {
 	
 	// Setup 之后立刻初始化并点亮
-	u8g2_InitDisplay(&u8g2);                  // 初始化控制器
-	u8g2_SetPowerSave(&u8g2, 0);              // 关省电，打开面板
+//	u8g2_InitDisplay(&u8g2);                  // 初始化控制器
+//	u8g2_SetPowerSave(&u8g2, 0);              // 关省电，打开面板
     	while(1)	
 	{
 
@@ -381,10 +388,10 @@ void task3(void * pvParameters)
         key_pd();          // 在 key_pd 里修改 menu_index
     }	
 		
-		menu_table[menu_index].current_operation();
-		menu_clamp();
+//		menu_table[menu_index].current_operation();
+//		menu_clamp();
 		
-		vTaskDelay(10);
+		vTaskDelay(200);
 	}
 
 }

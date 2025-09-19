@@ -2,10 +2,10 @@ Dependencies for Project 'Motor_DeviceDriver', Target 'Motor_DeviceDriver': (DO 
 CompilerVersion: 5050106::V5.05 update 1 (build 106)::.\ARMCC
 F (startup_stm32f103xe.s)(0x68C8D392)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_Motor_DeviceDriver-I"E:\Applications\Coding & Environmental Application\keil\pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include"-I"E:\Applications\Coding & Environmental Application\keil\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include"--pd "__UVISION_VERSION SETA 542" --pd "STM32F10X_HD SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f103xe.lst --xref -o motor_devicedriver\startup_stm32f103xe.o --depend motor_devicedriver\startup_stm32f103xe.d)
 F (..\Core\Inc\FreeRTOSConfig.h)(0x68C7D357)()
-F (.\FreeRTOS_main.c)(0x68C942EF)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Peripheral -I ../bsp_Peripheral -I ../FreeRTOS/include -I ../FreeRTOS/portable/RVDS/ARM_CM3 -I ../MDK-ARM -I ../Drivers/u8g2-I.\RTE\_Motor_DeviceDriver-I"E:\Applications\Coding & Environmental Application\keil\pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include"-I"E:\Applications\Coding & Environmental Application\keil\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-D__UVISION_VERSION="542" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o motor_devicedriver\freertos_main.o --omf_browse motor_devicedriver\freertos_main.crf --depend motor_devicedriver\freertos_main.d)
+F (.\FreeRTOS_main.c)(0x68CD18AD)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Peripheral -I ../bsp_Peripheral -I ../FreeRTOS/include -I ../FreeRTOS/portable/RVDS/ARM_CM3 -I ../MDK-ARM -I ../Drivers/u8g2-I.\RTE\_Motor_DeviceDriver-I"E:\Applications\Coding & Environmental Application\keil\pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include"-I"E:\Applications\Coding & Environmental Application\keil\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-D__UVISION_VERSION="542" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o motor_devicedriver\freertos_main.o --omf_browse motor_devicedriver\freertos_main.crf --depend motor_devicedriver\freertos_main.d)
 I (FreeRTOS_main.h)(0x68C92913)
 I (../Peripheral/motor_control.h)(0x688F2774)
-I (../bsp_Peripheral/mpu6050.h)(0x688DE708)
+I (../bsp_Peripheral/mpu6050.h)(0x68CD0102)
 I (../Core/Inc/main.h)(0x688CC009)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x686F49C4)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6888D29A)
@@ -49,6 +49,7 @@ I (E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\includ
 I (E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\include\limits.h)(0x686EB413)
 I (../Peripheral/UI_PID.h)(0x68C8D9F7)
 I (../Peripheral/menu.h)(0x68C93644)
+I (../Peripheral/filter.h)(0x68CD0103)
 I (../FreeRTOS/include/FreeRTOS.h)(0x688DF14C)
 I (../Core/Inc/FreeRTOSConfig.h)(0x68C7D357)
 I (../FreeRTOS/include/projdefs.h)(0x688DF14C)
@@ -103,7 +104,7 @@ I (../FreeRTOS/include/mpu_wrappers.h)(0x688DF14C)
 I (../FreeRTOS/include/task.h)(0x688DF14C)
 I (../FreeRTOS/include/list.h)(0x688DF14C)
 I (../Peripheral/motor_control.h)(0x688F2774)
-I (../bsp_Peripheral/mpu6050.h)(0x688DE708)
+I (../bsp_Peripheral/mpu6050.h)(0x68CD0102)
 I (E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\include\stdio.h)(0x686EB413)
 I (E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\include\string.h)(0x686EB413)
 I (../MDK-ARM/FreeRTOS_main.h)(0x68C92913)
@@ -977,8 +978,8 @@ I (E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\includ
 I (..\Peripheral\UI_PID.h)(0x68C8D9F7)
 I (..\Peripheral\menu.h)(0x68C93644)
 F (..\Peripheral\UI.h)(0x68C8D9F7)()
-F (..\bsp_Peripheral\mpu6050.c)(0x688F1D63)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Peripheral -I ../bsp_Peripheral -I ../FreeRTOS/include -I ../FreeRTOS/portable/RVDS/ARM_CM3 -I ../MDK-ARM -I ../Drivers/u8g2-I.\RTE\_Motor_DeviceDriver-I"E:\Applications\Coding & Environmental Application\keil\pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include"-I"E:\Applications\Coding & Environmental Application\keil\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-D__UVISION_VERSION="542" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o motor_devicedriver\mpu6050.o --omf_browse motor_devicedriver\mpu6050.crf --depend motor_devicedriver\mpu6050.d)
-I (..\bsp_Peripheral\mpu6050.h)(0x688DE708)
+F (..\bsp_Peripheral\mpu6050.c)(0x68CD0739)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Peripheral -I ../bsp_Peripheral -I ../FreeRTOS/include -I ../FreeRTOS/portable/RVDS/ARM_CM3 -I ../MDK-ARM -I ../Drivers/u8g2-I.\RTE\_Motor_DeviceDriver-I"E:\Applications\Coding & Environmental Application\keil\pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include"-I"E:\Applications\Coding & Environmental Application\keil\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-D__UVISION_VERSION="542" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o motor_devicedriver\mpu6050.o --omf_browse motor_devicedriver\mpu6050.crf --depend motor_devicedriver\mpu6050.d)
+I (..\bsp_Peripheral\mpu6050.h)(0x68CD0102)
 I (../Core/Inc/main.h)(0x688CC009)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x686F49C4)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x6888D29A)
@@ -1008,18 +1009,12 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x686F49C4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x686F49C4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x686F49C4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x686F49C4)
-I (../Core/Inc/i2c.h)(0x686FF1A4)
 I (E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\include\math.h)(0x686EB413)
-I (../FreeRTOS/include/FreeRTOS.h)(0x688DF14C)
-I (../Core/Inc/FreeRTOSConfig.h)(0x68C7D357)
-I (../FreeRTOS/include/projdefs.h)(0x688DF14C)
-I (../FreeRTOS/include/portable.h)(0x688DF14C)
-I (../FreeRTOS/include/deprecated_definitions.h)(0x688DF14C)
-I (../FreeRTOS/portable/RVDS/ARM_CM3/portmacro.h)(0x688DF14C)
-I (../FreeRTOS/include/mpu_wrappers.h)(0x688DF14C)
-I (../FreeRTOS/include/task.h)(0x688DF14C)
-I (../FreeRTOS/include/list.h)(0x688DF14C)
-F (..\bsp_Peripheral\mpu6050.h)(0x688DE708)()
+I (E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\include\stdlib.h)(0x686EB413)
+I (E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\include\stdio.h)(0x686EB413)
+I (../Peripheral/filter.h)(0x68CD0103)
+I (../Core/Inc/i2c.h)(0x686FF1A4)
+F (..\bsp_Peripheral\mpu6050.h)(0x68CD0102)()
 F (..\bsp_Peripheral\qmc5883l.c)(0x6890A1B8)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Peripheral -I ../bsp_Peripheral -I ../FreeRTOS/include -I ../FreeRTOS/portable/RVDS/ARM_CM3 -I ../MDK-ARM -I ../Drivers/u8g2-I.\RTE\_Motor_DeviceDriver-I"E:\Applications\Coding & Environmental Application\keil\pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include"-I"E:\Applications\Coding & Environmental Application\keil\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-D__UVISION_VERSION="542" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o motor_devicedriver\qmc5883l.o --omf_browse motor_devicedriver\qmc5883l.crf --depend motor_devicedriver\qmc5883l.d)
 I (..\bsp_Peripheral\qmc5883l.h)(0x6890A206)
 I (../Core/Inc/main.h)(0x688CC009)
@@ -1056,6 +1051,11 @@ I (../Core/Inc/i2c.h)(0x686FF1A4)
 I (../Core/Inc/gpio.h)(0x686F49C9)
 I (E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\include\math.h)(0x686EB413)
 F (..\bsp_Peripheral\qmc5883l.h)(0x6890A206)()
+F (..\Peripheral\filter.c)(0x68CD0103)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Peripheral -I ../bsp_Peripheral -I ../FreeRTOS/include -I ../FreeRTOS/portable/RVDS/ARM_CM3 -I ../MDK-ARM -I ../Drivers/u8g2-I.\RTE\_Motor_DeviceDriver-I"E:\Applications\Coding & Environmental Application\keil\pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include"-I"E:\Applications\Coding & Environmental Application\keil\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-D__UVISION_VERSION="542" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o motor_devicedriver\filter.o --omf_browse motor_devicedriver\filter.crf --depend motor_devicedriver\filter.d)
+I (..\Peripheral\filter.h)(0x68CD0103)
+I (E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\include\stdint.h)(0x686EB413)
+I (E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\include\math.h)(0x686EB413)
+F (..\Peripheral\filter.h)(0x68CD0103)()
 F (..\FreeRTOS\source\croutine.c)(0x688DF14C)(--c99 -c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Peripheral -I ../bsp_Peripheral -I ../FreeRTOS/include -I ../FreeRTOS/portable/RVDS/ARM_CM3 -I ../MDK-ARM -I ../Drivers/u8g2-I.\RTE\_Motor_DeviceDriver-I"E:\Applications\Coding & Environmental Application\keil\pack\ARM\CMSIS\6.1.0\CMSIS\Core\Include"-I"E:\Applications\Coding & Environmental Application\keil\pack\Keil\STM32F1xx_DFP\2.4.1\Device\Include"-D__UVISION_VERSION="542" -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE-o motor_devicedriver\croutine.o --omf_browse motor_devicedriver\croutine.crf --depend motor_devicedriver\croutine.d)
 I (../FreeRTOS/include/FreeRTOS.h)(0x688DF14C)
 I (E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\include\stddef.h)(0x686EB413)

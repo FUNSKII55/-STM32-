@@ -909,6 +909,16 @@
               <FileType>5</FileType>
               <FilePath>..\bsp_Peripheral\qmc5883l.h</FilePath>
             </File>
+            <File>
+              <FileName>filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripheral\filter.c</FilePath>
+            </File>
+            <File>
+              <FileName>filter.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Peripheral\filter.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

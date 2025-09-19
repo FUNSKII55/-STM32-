@@ -30,14 +30,8 @@ motor_devicedriver\mpu6050.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_
 motor_devicedriver\mpu6050.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 motor_devicedriver\mpu6050.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 motor_devicedriver\mpu6050.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-motor_devicedriver\mpu6050.o: ../Core/Inc/i2c.h
 motor_devicedriver\mpu6050.o: E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\Bin\..\include\math.h
-motor_devicedriver\mpu6050.o: ../FreeRTOS/include/FreeRTOS.h
-motor_devicedriver\mpu6050.o: ../Core/Inc/FreeRTOSConfig.h
-motor_devicedriver\mpu6050.o: ../FreeRTOS/include/projdefs.h
-motor_devicedriver\mpu6050.o: ../FreeRTOS/include/portable.h
-motor_devicedriver\mpu6050.o: ../FreeRTOS/include/deprecated_definitions.h
-motor_devicedriver\mpu6050.o: ../FreeRTOS/portable/RVDS/ARM_CM3/portmacro.h
-motor_devicedriver\mpu6050.o: ../FreeRTOS/include/mpu_wrappers.h
-motor_devicedriver\mpu6050.o: ../FreeRTOS/include/task.h
-motor_devicedriver\mpu6050.o: ../FreeRTOS/include/list.h
+motor_devicedriver\mpu6050.o: E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\Bin\..\include\stdlib.h
+motor_devicedriver\mpu6050.o: E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\Bin\..\include\stdio.h
+motor_devicedriver\mpu6050.o: ../Peripheral/filter.h
+motor_devicedriver\mpu6050.o: ../Core/Inc/i2c.h

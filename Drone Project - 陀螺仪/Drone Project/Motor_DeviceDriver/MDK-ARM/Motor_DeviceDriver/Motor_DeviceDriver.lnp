@@ -35,6 +35,7 @@
 "motor_devicedriver\ui.o"
 "motor_devicedriver\mpu6050.o"
 "motor_devicedriver\qmc5883l.o"
+"motor_devicedriver\filter.o"
 "motor_devicedriver\croutine.o"
 "motor_devicedriver\event_groups.o"
 "motor_devicedriver\list.o"
