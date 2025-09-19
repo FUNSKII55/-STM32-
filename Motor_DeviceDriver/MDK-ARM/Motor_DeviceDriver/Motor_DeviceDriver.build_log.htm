@@ -1,0 +1,84 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.42.0.0
+Copyright (C) 2025 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1, 1, LIC=ATTQ1-CQHQ6-Y8TFK-ZXJJZ-75GI3-IDTMB
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.42.0.0
+Toolchain Path:  E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.42.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
+Dialog DLL:      TCM.DLL V1.56.6.0
+ 
+<h2>Project:</h2>
+C:\Users\FUNSKII\Desktop\Drone Project\Motor_DeviceDriver\MDK-ARM\Motor_DeviceDriver.uvprojx
+Project File Date:  08/04/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.05 update 1 (build 106)', folder: 'E:\Applications\Coding & Environmental Application\keil\core\ARM\ARMCC\Bin'
+Build target 'Motor_DeviceDriver'
+compiling FreeRTOS_main.c...
+oled.h(1): warning:  #1-D: last line of file ends without a newline
+  #include "i2c.h"
+FreeRTOS_main.c(272): warning:  #177-D: variable "mag_x" was declared but never referenced
+          int16_t mag_x, mag_y, mag_z;
+FreeRTOS_main.c(272): warning:  #177-D: variable "mag_y" was declared but never referenced
+          int16_t mag_x, mag_y, mag_z;
+FreeRTOS_main.c(272): warning:  #177-D: variable "mag_z" was declared but never referenced
+          int16_t mag_x, mag_y, mag_z;
+FreeRTOS_main.c(204): warning:  #550-D: variable "Yaw_gyro" was set but never used
+  static float Yaw_gyro = 0;      // 陀螺仪积分Yaw（单位°）
+FreeRTOS_main.c(205): warning:  #177-D: variable "dt" was declared but never referenced
+  static float dt = 0.01f;        // 控制周期，和你的vTaskDelay一致，这里10ms
+FreeRTOS_main.c: 6 warnings, 0 errors
+compiling main.c...
+../Core/Src/main.c(119): warning:  #223-D: function "debug_flash_dump" declared implicitly
+  debug_flash_dump();
+../Core/Src/main.c: 1 warning, 0 errors
+linking...
+Motor_DeviceDriver\Motor_DeviceDriver.axf: Error: L6218E: Undefined symbol Real_pitch (referred from freertos_main.o).
+Motor_DeviceDriver\Motor_DeviceDriver.axf: Error: L6218E: Undefined symbol Real_roll (referred from freertos_main.o).
+Motor_DeviceDriver\Motor_DeviceDriver.axf: Error: L6218E: Undefined symbol Real_yaw (referred from freertos_main.o).
+Motor_DeviceDriver\Motor_DeviceDriver.axf: Error: L6218E: Undefined symbol debug_flash_dump (referred from main.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 4 error messages.
+"Motor_DeviceDriver\Motor_DeviceDriver.axf" - 4 Error(s), 7 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
+                ARM::CMSIS@6.1.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.1.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil::STM32F1xx_DFP@2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Motor_DeviceDriver
+  E:/Applications/Coding & Environmental Application/keil/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include
+  E:/Applications/Coding & Environmental Application/keil/pack/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.1.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+Target not created.
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
